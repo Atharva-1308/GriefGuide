@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Send, Bot, User, Heart, Volume2, Keyboard, Mic, Brain } from 'lucide-react';
+import { Send, Bot, User, Heart, Volume2, Keyboard, Mic, Brain, Upload } from 'lucide-react';
 import VoiceRecorder from './VoiceRecorder';
 
 interface Message {
@@ -332,6 +332,13 @@ const ChatBot: React.FC = () => {
               >
                 <Mic className="h-4 w-4" />
                 <span>Voice</span>
+              </button>
+              <button
+                onClick={() => window.location.hash = 'memory'}
+                className="flex items-center space-x-2 px-4 py-2 rounded-lg bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 hover:bg-indigo-200 dark:hover:bg-indigo-900/50 transition-all duration-200"
+              >
+                <Upload className="h-4 w-4" />
+                <span>Memory Upload</span>
               </button>
             </div>
 

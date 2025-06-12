@@ -82,14 +82,25 @@ const Home: React.FC<HomeProps> = ({ setActiveSection }) => {
               Upload their letters, voice recordings, and conversations to receive personalized support 
               that honors their unique way of caring for you.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+            <div className="flex flex-col items-center justify-center space-y-4">
+              {/* Main CTA - Start Your Journey */}
               <button
-                onClick={() => setActiveSection('memory')}
+                onClick={() => setActiveSection('chat')}
                 className="bg-gradient-to-r from-purple-600 to-purple-700 text-white px-8 py-4 rounded-full font-semibold text-lg hover:from-purple-700 hover:to-purple-800 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
               >
                 Start Your Journey
               </button>
-              <div className="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400">
+              
+              {/* Secondary CTA - Memory Upload */}
+              <button
+                onClick={() => setActiveSection('memory')}
+                className="bg-gradient-to-r from-indigo-500 to-indigo-600 text-white px-6 py-3 rounded-full font-medium text-base hover:from-indigo-600 hover:to-indigo-700 transform hover:scale-105 transition-all duration-200 shadow-md hover:shadow-lg flex items-center space-x-2"
+              >
+                <Upload className="h-4 w-4" />
+                <span>Upload Loved One's Memories</span>
+              </button>
+              
+              <div className="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400 mt-2">
                 <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
                 <span>AI Learns From Your Loved One's Memories</span>
               </div>
